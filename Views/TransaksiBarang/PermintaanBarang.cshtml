@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.subTitle = "Permintaan Barang";
+    ViewBag.pageTitle = "Lexa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@* @section AddToHead {
+    <!-- Responsive Table css -->
+    <link href="~/assets/libs/admin-resources/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" />
+}
+@section scripts {
+    <!-- Responsive Table js -->
+    <script src="~/assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script>
+
+    <!-- Init js -->
+    <script src="~/assets/js/pages/table-responsive.init.js"></script>
+    <script src="~/assets/js/app.js"></script>
+} *@
+<div class="row">
+<div class="col-12">
+    <div class="card">
+        <div class="card-body">
+            <h1>Permintaan Barang</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="NamaPekerja">Nama Pekerja*</label>
+                        <input type="text" name="Nama Pekerja" class="form-control " id="namapekerja" value="" placeholder="SuperUser_01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="BagianPekerja">Bagian / Fungsi*</label>
+                        <input type="text" name="Jumlah" class="form-control " maxlength="18" size="18" id="nip" value="" placeholder="contoh officer safety /HSSE" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Barang</label>
+                        <select id="position" name="position" class="form-control " value="" required>
+                            <option disabled>Pilih Kategori </option>
+                            <option value="">Helm A</option>
+                            <option value="">Helm B</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="MSL">Nomor Pegawai</label>
+                        <input type="text" name="MSL" class="form-control " id="email" value="" placeholder="XXXXXXX" required>
+                    </div>
+                        <div class="form-group">
+                            <label for="MIV">No. MIV</label>
+                            <input type="text" name="MIV" class="form-control " id="email" value="" placeholder="XXXXXXX" required>
+                        </div>
+                </div>
+                <div class="card-footer">
+                    <p>Ini Bagian Detail Barang</p>
+                </div>
+                <div class="card-footer">
+                    <a></a>
+                    <button type="submit" class="btn btn-primary" style="float:right">Add</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
