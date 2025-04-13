@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+
+    @Html.Partial("~/Views/Shared/_meta.cshtml")
+
+    @if (IsSectionDefined("AddToHead"))
+    {
+        @RenderSection("AddToHead", required: false)
+    }
+
+    @Html.Partial("~/Views/Shared/_HeadCSS.cshtml")
+</head>
+
+<body>
+    <!-- Begin page -->
+    @RenderBody()
+
+    <!-- JAVASCRIPT -->
+    <script src="~/assets/libs/jquery/jquery.min.js"></script>
+    <script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="~/assets/libs/node-waves/waves.min.js"></script>
+    <script src="~/assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!-- App js -->
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

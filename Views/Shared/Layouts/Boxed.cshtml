@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    @Html.Partial("~/Views/Shared/_meta.cshtml")
+
+    @if (IsSectionDefined("AddToHead"))
+    {
+        @RenderSection("AddToHead", required: false)
+    }
+
+    @Html.Partial("~/Views/Shared/_HeadCSS.cshtml")
+
+</head>
+<body data-sidebar="dark" data-keep-enlarged="true" class="vertical-collpsed" data-layout-size="boxed">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        @Html.Partial("~/Views/Shared/_Header.cshtml")
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    @Html.Partial("~/Views/Shared/_PageTitle1.cshtml")
+
+                    @RenderBody()
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+            @Html.Partial("~/Views/Shared/_Footer.cshtml")
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    @Html.Partial("~/Views/Shared/_HeaderRight.cshtml")
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="~/assets/libs/jquery/jquery.min.js"></script>
+    <script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="~/assets/libs/node-waves/waves.min.js"></script>
+    <script src="~/assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+
+
+    @RenderSection("scripts", required: false)
+
+
+</body>
+
+
+</html>
