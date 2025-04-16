@@ -12,5 +12,9 @@ namespace Lexa.Controllers
         {
             return View();
         }
+        public IActionResult DetailRiwayatTransaksi()
+        {
+            return View();
+        }
     }
 }

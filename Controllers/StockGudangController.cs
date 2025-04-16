@@ -8,6 +8,10 @@ namespace Lexa.Controllers
         {
             return View();
         }
+        public IActionResult DetailBarang()
+        {
+            return View();
+        }
         public IActionResult TambahBarang()
         {
             return View();
