@@ -570,7 +570,7 @@ body[data-layout=horizontal] .footer {
 }
 
 .menu-title {
-  padding: 12px 20px !important;
+  padding: 12px 20px 0px 20px !important;
   letter-spacing: 0.05em;
   pointer-events: none;
   cursor: default;
