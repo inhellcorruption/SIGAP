@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "Halaman Notifikasi";
+    ViewBag.subTitle = "#";
+    ViewBag.pageTitle = "Lexa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section AddToHead {
+    <!-- Responsive Table CSS -->
+    <link href="~/assets/libs/admin-resources/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" />
+}
+
+@section scripts {
+    <!-- Responsive Table JS -->
+    <script src="~/assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script>
+    <!-- Init JS -->
+    <script src="~/assets/js/pages/table-responsive.init.js"></script>
+    <script src="~/assets/js/app.js"></script>
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h1>Notifikasi (Sementara Nanti Diubah)</h1>
+                <div class="card-header">
+                    <button type="button" class="btn btn-success waves-effect waves-light">Approve</button>
+                    <button type="button" class="btn btn-danger waves-effect waves-light">Reject</button>
+                </div>
+                <div class="table-responsive mb-0" data-pattern="priority-columns">
+                    <table id="approval-table" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>Nama Peminjam</th>
+                                <th>Status</th>
+                                <th>No. Pegawai</th>
+                                <th>Bagian</th>
+                                <th>Tanggal</th>
+                                <th>Nama Barang</th>
+                                <th>Jumlah</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Evan Flores</td>
+                                <td><span class="badge bg-warning">Pending</span></td>
+                                <td>2321212</td>
+                                <td>HSSE</td>
+                                <td>10/12/24</td>
+                                <td>Dust Mask N95</td>
+                                <td>24</td>
+                                <td><a href="~/Approval/DetailDataPermintaanBarang" class="btn btn-primary" role="button" aria-pressed="true">Detail</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Arlene Wilson</td>
+                                <td><span class="badge bg-danger">Rejected</span></td>
+                                <td>1344345</td>
+                                <td>TKJP</td>
+                                <td>09/12/24</td>
+                                <td>Tali Dagu</td>
+                                <td>4</td>
+                                <td><button class="btn btn-primary">Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Jennie Cooper</td>
+                                <td><span class="badge bg-success">Approved</span></td>
+                                <td>1234553</td>
+                                <td>HSSE</td>
+                                <td>06/12/24</td>
+                                <td>Ear Plug Kotak</td>
+                                <td>10</td>
+                                <td><button class="btn btn-primary">Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Naomi Campbell</td>
+                                <td><span class="badge bg-danger">Rejected</span></td>
+                                <td>5232456</td>
+                                <td>TKJP</td>
+                                <td>20/11/24</td>
+                                <td>Pemantik Api Piston</td>
+                                <td>56</td>
+                                <td><button class="btn btn-primary">Detail</button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Jorge Black</td>
+                                <td><span class="badge bg-success">Approved</span></td>
+                                <td>2441556</td>
+                                <td>FOC I</td>
+                                <td>01/11/24</td>
+                                <td>Kacamata Safety Kri</td>
+                                <td>34</td>
+                                <td><button class="btn btn-primary">Detail</button></td>
+                            </tr>
+                            <!-- Additional rows here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

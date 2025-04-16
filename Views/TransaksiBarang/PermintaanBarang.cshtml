@@ -1,68 +1,139 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-    ViewBag.subTitle = "Permintaan Barang";
-    ViewBag.pageTitle = "Lexa";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@{
+	ViewData["Title"] = "Index";
+	ViewBag.subTitle = "Permintaan Barang";
+	ViewBag.pageTitle = "Lexa";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section AddToHead {
-    <!-- Responsive Table css -->
-    <link href="~/assets/libs/admin-resources/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" />
+	<!-- Responsive Table css -->
+	<link href="~/assets/libs/admin-resources/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+	<link href="~/assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+	<link href="~/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
 }
 @section scripts {
-    <!-- Responsive Table js -->
-    <script src="~/assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script>
+	<!-- Responsive Table js -->
+	<script src="~/assets/libs/admin-resources/rwd-table/rwd-table.min.js"></script>
 
-    <!-- Init js -->
-    <script src="~/assets/js/pages/table-responsive.init.js"></script>
-    <script src="~/assets/js/app.js"></script>
-} 
+	<!-- Init js -->
+	<script src="~/assets/js/pages/table-responsive.init.js"></script>
+	<script src="~/assets/libs/select2/js/select2.min.js"></script>
+	<script src="~/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="~/assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+	<script src="~/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+	<script src="~/assets/libs/admin-resources/bootstrap-filestyle/bootstrap-filestyle.min.js"></script>
+	<script src="~/assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+	<script src="~/assets/js/pages/form-advanced.init.js"></script>
+
+	<script src="~/assets/js/pages/table-responsive.init.js"></script>
+	<script src="~/assets/js/app.js"></script>
+}
 
 <div class="row">
-<div class="col-12">
-    <div class="card">
-        <div class="card-body">
-            <h1>Permintaan Barang</h1>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="NamaPekerja">Nama Pekerja*</label>
-                        <input type="text" name="Nama Pekerja" class="form-control " id="namapekerja" value="" placeholder="SuperUser_01" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="BagianPekerja">Bagian / Fungsi*</label>
-                        <input type="text" name="Jumlah" class="form-control " maxlength="18" size="18" id="nip" value="" placeholder="contoh officer safety /HSSE" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="position">Barang</label>
-                        <select id="position" name="position" class="form-control " value="" required>
-                            <option disabled>Pilih Kategori </option>
-                            <option value="">Helm A</option>
-                            <option value="">Helm B</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="MSL">Nomor Pegawai</label>
-                        <input type="text" name="MSL" class="form-control " id="email" value="" placeholder="XXXXXXX" required>
-                    </div>
-                        <div class="form-group">
-                            <label for="MIV">No. MIV</label>
-                            <input type="text" name="MIV" class="form-control " id="email" value="" placeholder="XXXXXXX" required>
-                        </div>
-                </div>
-                <div class="card-footer">
-                    <p>Ini Bagian Detail Barang</p>
-                </div>
-                <div class="card-footer">
-                    <a></a>
-                    <button type="submit" class="btn btn-primary" style="float:right">Add</button>
-                </div>
-            </div>
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<h1>Permintaan Barang</h1>
+				<div class="row">
+					<!--Nama Kepala/pegawai tetap-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="NamaPekerja">Nama Pekerja*</label>
+							<input type="text" name="Nama Pekerja" class="form-control " id="namapekerja" value="" placeholder="SuperUser_01" required>
+						</div>
+						<div class="form-group">
+							<label for="BagianPekerja">Bagian / Fungsi*</label>
+							<input type="text" name="Jumlah" class="form-control " maxlength="18" size="18" id="nip" value="" placeholder="contoh officer safety /HSSE" required>
+						</div>
+						<div>
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="tkjpCheckbox">
+								<label class="form-check-label" for="tkjpCheckbox">Untuk Pekerja TKJP</label>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="MSL">Nomor Pegawai</label>
+							<input type="text" name="MSL" class="form-control " id="email" value="" placeholder="XXXXXXX" required>
+						</div>
+						<div class="form-group">
+							<label for="MIV">No. MIV</label>
+							<input type="text" name="MIV" class="form-control " id="email" value="" placeholder="XXXXXXX" required>
+						</div>
+					</div>
+				</div>
+				<!--Pekerja TKJP-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="MSL">Nama Pekerja TKJP*</label>
+							<input type="text" name="MSL" class="form-control " id="email" value="" placeholder="XXXXXXX" required>
+						</div>
+						<div class="form-group">
+							<label for="MIV">Bagian *</label>
+							<input type="text" name="MIV" class="form-control " id="email" value="" placeholder="XXXXXXX" required>
+						</div>
+						<form>
+							<div class="form-group">
+								<label class="form-label">Barang</label>
+								<select class="form-control select2">
+									<option>Select</option>
+									<optgroup label="PELINDUNG TANGAN">
+										<option value="STKulit">Sarung Tangan Kulit</option>
+										<option value="STListrik">Sarung Tangan Listrik</option>
+										<option value="STWelder">Sarung Tangan Welder</option>
+										<option value="STMekanik">Sarung Tangan Mekanik</option>
+										<option value="STDrumPlant">Sarung Tangan Drum Plant</option>
+										<option value="STKain">Sarung Tangan Kain</option>
+										<option value="STAlumunium">Sarung Tangan Alumunium</option>
+										<option value="STAsbes">Sarung Tangan Asbes</option>
+										<option value="PenjepitST">Penjepit Sarung Tangan</option>
+									</optgroup>
+									<optgroup label="Pacific Time Zone">
+										<option value="CA">California</option>
+										<option value="NV">Nevada</option>
+										<option value="OR">Oregon</option>
+										<option value="WA">Washington</option>
+									</optgroup>
+								</select>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="MSL">ID Finger *</label>
+							<input type="text" name="MSL" class="form-control " id="email" value="" placeholder="XXXXXXX" required>
+						</div>
+						<div class="form-group">
+							<label for="MIV">Perusahaan *</label>
+							<input type="text" name="MIV" class="form-control " id="email" value="" placeholder="XXXXXXX" required>
+						</div>
+						<div class="form-group">
+							<label for="userphoto">File Pendukung*</label><br>
+							<div class="btn btn-file">
 
-        </div>
-    </div>
+								<input type="file" id="userphoto" name="userphoto" accept="image/png, image/gif, image/jpeg" onchange="loadImage(event)">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Garis Pemisah -->
+				<hr style="border: 10px solid #2B3A4A" />
+				<!-- Footer atau tambah Barang-->
+				<div class="card-footer">
+					<p>Ini Bagian Detail Barang</p>
+				</div>
+				<div class="card-footer">
+					<a></a>
+					<button type="submit" class="btn btn-primary" style="float:right">Add</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </div>
-</div>
+
 

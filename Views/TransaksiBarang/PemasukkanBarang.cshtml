@@ -8,6 +8,11 @@
 @section AddToHead {
     <!-- Responsive Table css -->
     <link href="~/assets/libs/admin-resources/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="~/assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
 }
 @section scripts {
     <!-- Responsive Table js -->
@@ -15,6 +20,14 @@
 
     <!-- Init js -->
     <script src="~/assets/js/pages/table-responsive.init.js"></script>
+    <script src="~/assets/libs/select2/js/select2.min.js"></script>
+    <script src="~/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+    <script src="~/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="~/assets/libs/admin-resources/bootstrap-filestyle/bootstrap-filestyle.min.js"></script>
+    <script src="~/assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+
+    <script src="~/assets/js/pages/form-advanced.init.js"></script>
     <script src="~/assets/js/app.js"></script>
 }
 
@@ -33,22 +46,40 @@
                             <label for="BagianPekerja">Bagian / Fungsi*</label>
                             <input type="text" name="Jumlah" class="form-control " maxlength="18" size="18" id="nip" value="" placeholder="contoh officer safety /HSSE" required>
                         </div>
-                        <div class="form-group">
-                            <label for="position">Barang</label>
-                            <select id="position" name="position" class="form-control " value="" required>
-                                <option disabled>Pilih Kategori </option>
-                                <option value="">Helm A</option>
-                                <option value="">Helm B</option>
+                        <form>
+                            <div class="form-group">
+                            <label class="form-label">Barang</label>
+                            <select class="form-control select2">
+                                <option>Select</option>
+                                <optgroup label="PELINDUNG TANGAN">
+                                    <option value="STKulit">Sarung Tangan Kulit</option>
+                                    <option value="STListrik">Sarung Tangan Listrik</option>
+                                    <option value="STWelder">Sarung Tangan Welder</option>
+                                    <option value="STMekanik">Sarung Tangan Mekanik</option>
+                                    <option value="STDrumPlant">Sarung Tangan Drum Plant</option>
+                                    <option value="STKain">Sarung Tangan Kain</option>
+                                    <option value="STAlumunium">Sarung Tangan Alumunium</option>
+                                    <option value="STAsbes">Sarung Tangan Asbes</option>
+                                    <option value="PenjepitST">Penjepit Sarung Tangan</option>
+                                    </optgroup>
+                                <optgroup label="Pacific Time Zone">
+                                        <option value="CA">California</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="WA">Washington</option>
+                                </optgroup>
                             </select>
                         </div>
+                        </form>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="MSL">Nomor Pegawai</label>
                             <input type="text" name="MSL" class="form-control " id="email" value="" placeholder="XXXXXXX" required>
                         </div>
-                        
                     </div>
+                    </div>
+                <hr style="border: 10px solid #2B3A4A" />
                     <div class="card-footer">
                     <p>Ini Bagian Detail Barang</p>
                     </div>

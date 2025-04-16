@@ -4,7 +4,7 @@ namespace Lexa.Controllers
 {
     public class NotifikasiController : Controller
     {
-        public IActionResult Index()
+        public IActionResult HalamanNotifikasi()
         {
             return View();
         }

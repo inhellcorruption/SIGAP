@@ -141,12 +141,12 @@
 }
 
 .menu-title {
-    padding: 12px 20px !important;
+    padding: 12px 20px 0px 20px !important;
     letter-spacing: .05em;
     pointer-events: none;
     cursor: default;
-    font-size: 10px;
-    text-transform: uppercase;
+    //font-size: 12px;
+    //text-transform: uppercase;
     color: var(--#{$prefix}sidebar-menu-item-icon-color);
     font-weight: $font-weight-semibold;
 }
@@ -399,6 +399,14 @@ body[data-sidebar="dark"] {
                         }
                     }
                 }
+                ul.sub-menu-user {
+                    padding-left: 0px !important;
+
+                    a {
+                        padding-top: 5px !important;
+                        padding-bottom: 5px !important;
+                    }
+                }
             }
 
             >li{
@@ -473,6 +481,10 @@ body[data-sidebar="dark"] {
             i {
                 color: var(--#{$prefix}sidebar-dark-menu-item-active-color )!important;
             }
+        }
+        > a.no-background{
+            color: var(--#{$prefix}sidebar-dark-menu-item-color )!important;
+            background-color: var(--#{$prefix}sidebar-dark-bg);
         }
         > i {
             color: var(--#{$prefix}sidebar-dark-menu-item-active-color )!important;
@@ -700,6 +712,29 @@ body[data-sidebar="colored"] {
             &:after {
                 content: "\F0140";
             }
+        }
+    }
+}
+
+.hr-sidemenu {
+    border-top: 2px solid #bbb;
+    margin: 12px 0px 12px 0px !important;
+}
+
+#sidebar-menu {
+    .mm-active {
+        .arrow-user {
+            &:after {
+                content: "\F0140";
+            }
+        }
+    }
+
+    .arrow-user {
+        &:after {
+            content: "\F0142";
+            font-family: 'Material Design Icons';
+            font-style: normal;
         }
     }
 }

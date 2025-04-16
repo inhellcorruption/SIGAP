@@ -24,14 +24,22 @@
 
 .navbar-brand-box {
     padding: 0 1.5rem;
+    border-bottom: 2px solid rgba(187,187,187,0.25);
     text-align: center;
     width: $navbar-brand-box-width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
     line-height: 70px;
 
     .logo-sm {
+        display: none;
+    }
+    
+    .logo-topbar-sm {
         display: none;
     }
 }
@@ -110,6 +118,19 @@
         }
 
         span.logo-sm {
+            display: inline-block;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+
+        span.logo-topbar-lg {
+            display: none;
+        }
+
+        span.logo-topbar-sm {
             display: inline-block;
         }
     }
@@ -314,4 +335,3 @@ body[data-layout="horizontal"] {
         }    
     }
 }
-
