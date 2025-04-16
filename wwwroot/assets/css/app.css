@@ -77,20 +77,33 @@ File: Main Css File
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  height: 70px;
+  height: 72px;
   padding: 0 calc(1.5rem / 2) 0 0;
 }
 
 .navbar-brand-box {
   padding: 0 1.5rem;
+  border-bottom: 2px solid rgba(187, 187, 187, 0.25);
   text-align: center;
   width: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo {
   line-height: 70px;
 }
 .logo .logo-sm {
+  display: none;
+}
+.logo .logo-topbar-sm {
   display: none;
 }
 
@@ -113,7 +126,7 @@ File: Main Css File
 
 /* Search */
 .app-search {
-  padding: calc(32px / 2) 0;
+  padding: calc(34px / 2) 0;
 }
 .app-search .form-control {
   border: none;
@@ -154,12 +167,20 @@ File: Main Css File
     display: inline-block;
   }
 }
+@media (max-width: 576px) {
+  .logo span.logo-topbar-lg {
+    display: none;
+  }
+  .logo span.logo-topbar-sm {
+    display: inline-block;
+  }
+}
 .page-content {
-  padding: calc(70px + 1.5rem) calc(1.5rem / 2) 60px calc(1.5rem / 2);
+  padding: calc(72px + 1.5rem) calc(1.5rem / 2) 60px calc(1.5rem / 2);
 }
 
 .header-item {
-  height: 70px;
+  height: 72px;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
   color: var(--bs-header-item-color);
@@ -290,7 +311,7 @@ body[data-layout=horizontal] .navbar-brand-box {
   display: inline-block;
 }
 body[data-layout=horizontal] .page-content {
-  margin-top: 70px;
+  margin-top: 72px;
   padding: calc(180px + 1.5rem) calc(1.5rem / 2) 60px calc(1.5rem / 2);
 }
 
@@ -471,7 +492,7 @@ body[data-layout=horizontal] .footer {
   bottom: 0;
   margin-top: 0;
   position: fixed;
-  top: 70px;
+  top: 72px;
   -webkit-box-shadow: 0 -3px 31px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.02);
           box-shadow: 0 -3px 31px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.02);
 }
@@ -482,7 +503,7 @@ body[data-layout=horizontal] .footer {
 }
 .main-content .content {
   padding: 0 15px 10px 15px;
-  margin-top: 70px;
+  margin-top: 72px;
 }
 
 #sidebar-menu {
@@ -553,8 +574,6 @@ body[data-layout=horizontal] .footer {
   letter-spacing: 0.05em;
   pointer-events: none;
   cursor: default;
-  font-size: 10px;
-  text-transform: uppercase;
   color: var(--bs-sidebar-menu-item-icon-color);
   font-weight: 600;
 }
@@ -737,6 +756,13 @@ body[data-sidebar=dark] #sidebar-menu ul li ul.sub-menu li a {
 body[data-sidebar=dark] #sidebar-menu ul li ul.sub-menu li a:hover {
   color: var(--bs-sidebar-dark-menu-item-hover-color);
 }
+body[data-sidebar=dark] #sidebar-menu ul li ul.sub-menu-user {
+  padding-left: 0px !important;
+}
+body[data-sidebar=dark] #sidebar-menu ul li ul.sub-menu-user a {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
 body[data-sidebar=dark] #sidebar-menu ul > li > a.mm-active {
   background-color: var(--bs-sidebar-dark-menu-item-active-bg);
 }
@@ -774,6 +800,10 @@ body[data-sidebar=dark] .mm-active > a {
 }
 body[data-sidebar=dark] .mm-active > a i {
   color: var(--bs-sidebar-dark-menu-item-active-color) !important;
+}
+body[data-sidebar=dark] .mm-active > a.no-background {
+  color: var(--bs-sidebar-dark-menu-item-color) !important;
+  background-color: var(--bs-sidebar-dark-bg);
 }
 body[data-sidebar=dark] .mm-active > i {
   color: var(--bs-sidebar-dark-menu-item-active-color) !important;
@@ -909,6 +939,20 @@ body[data-sidebar=colored].vertical-collpsed .vertical-menu #sidebar-menu ul li 
 }
 [dir=rtl] #sidebar-menu .mm-active > .has-arrow:after {
   content: "\f0140";
+}
+
+.hr-sidemenu {
+  border-top: 2px solid #bbb;
+  margin: 12px 0px 12px 0px !important;
+}
+
+#sidebar-menu .mm-active .arrow-user:after {
+  content: "\f0140";
+}
+#sidebar-menu .arrow-user:after {
+  content: "\f0142";
+  font-family: "Material Design Icons";
+  font-style: normal;
 }
 
 .topnav {
@@ -3471,7 +3515,7 @@ div.dataTables_wrapper div.dataTables_filter input {
   color: #fff;
 }
 .table-rep-plugin .fixed-solution .sticky-table-header {
-  top: 70px !important;
+  top: 72px !important;
   background-color: var(--bs-primary);
   border-color: var(--bs-primary);
 }
@@ -3493,7 +3537,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 
 @media (min-width: 992px) {
   body[data-layout=horizontal] .fixed-solution .sticky-table-header {
-    top: 148px !important;
+    top: 150px !important;
   }
 }
 
