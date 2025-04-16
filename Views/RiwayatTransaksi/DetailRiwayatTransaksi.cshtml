@@ -1,7 +1,6 @@
-﻿
-@{
-    ViewData["Title"] = "DetailDataPermintaanBarang";
-    ViewBag.subTitle = "Approval";
+﻿@{
+    ViewData["Title"] = "Detail Riwayat Transaksi";
+    ViewBag.subTitle = "RiwayatTransaksi";
     ViewBag.pageTitle = "Lexa";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -10,16 +9,14 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h1>Approval Permintaan Barang</h1>
-                <button type="button" class="btn btn-success waves-effect waves-light">Approve</button>
-                <button type="button" class="btn btn-danger waves-effect waves-light">Reject</button>
                 <div class="card-header">
                     <div class="row">
+                        <h4>Data Permintaan Barang</h4>
                         <div class="col-xl-6 col-sm-12">
                             <a> Nomor MIV: </a>
                         </div>
                         <div class="col-xl-6 col-sm-12">
-                            <a> Nomor Pegawai: </a>
+                            <a> ID Finger: </a>
                         </div>
                     </div>
                     <div class="row">
@@ -36,6 +33,23 @@
                         </div>
                         <div class="col-xl-6 col-sm-12">
                             <a> Status: </a>
+                        </div>
+                    </div>
+                    <h4 class="mt-4">Penanggung Jawab</h4> 
+                    <div class="row">
+                        <div class="col-xl-6 col-sm-12">
+                            <a> Nama Pekerja: </a>
+                        </div>
+                        <div class="col-xl-6 col-sm-12">
+                            <a> Bagian: </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-sm-12">
+                            <a> Nomor Pegawai: </a>
+                        </div>
+                        <div class="col-xl-6 col-sm-12">
+                            <a> File Pendukung: </a>
                         </div>
                     </div>
                     <hr style="border: 10px solid #2B3A4A" />

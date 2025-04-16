@@ -8,5 +8,9 @@ namespace Lexa.Controllers
         {
             return View();
         }
+        public IActionResult DetailDataPermintaanBarang()
+        {
+            return View();
+        }
     }
 }
