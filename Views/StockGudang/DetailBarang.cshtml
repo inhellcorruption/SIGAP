@@ -1,7 +1,69 @@
-﻿
-@{
-    ViewData["Title"] = "DetailBarang";
+﻿@{
+    ViewData["Title"] = "Detail Barang";
+    ViewBag.subTitle = "StockGudang";
+    ViewBag.pageTitle = "Lexa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>DetailBarang</h1>
+<style>
+    .detail-card {
+        background-color: #f0f4f8;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        text-align: center;
+        max-width: 600px;
+        margin: auto;
+    }
 
+        .detail-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+    .info-box {
+        background-color: #1f2a38;
+        color: white;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+        .info-box div {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+    .badge {
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .badge-blue {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .badge-green {
+        background-color: #28a745;
+        color: white;
+    }
+</style>
+
+<div class="detail-card">
+    <img src="~/images/sarung-tangan.png" alt="Sarung Tangan Kulit" />
+
+    <div class="info-box">
+        <div><strong>Sarung Tangan Kulit</strong></div>
+        <div>Kategori: <span>Pelindung Tangan</span></div>
+        <div>Stock: <span class="badge badge-blue">400</span></div>
+        <div>Minimum Stock Level: <span class="badge badge-blue">200</span></div>
+        <div>Status: <span class="badge badge-green">200%</span></div>
+    </div>
+</div>

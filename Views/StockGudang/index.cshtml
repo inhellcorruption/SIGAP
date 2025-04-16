@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "index";
     ViewBag.subTitle = "StockGudang";
     ViewBag.pageTitle = "Lexa";
@@ -24,7 +24,7 @@
             <div class="card-body">
                 <h1>Master Stock Gudang</h1>
                 <div class="card-header">
-                    <!--tombol-->
+
                     <button type="button" class="btn btn-success"><a href="/StockGudang/TambahBarang" class="text-white">Tambah</a></button>
                     <button type="button" class="btn btn-danger"><a href="#" class="text-white">Hapus</a></button>
                     <button type="button" class="btn btn-success"><a href="/transaksibarang/pemasukkanbarang" class="text-white">Pemasukan</a></button>
@@ -50,7 +50,7 @@
                                 <td>Sarung Tangan</td>
                                 <td>222</td>
                                 <td>
-                                    <button class="btn btn-info">Detail</button>
+                                    <a href="~/StockGudang/DetailBarang" class="btn btn-primary" role="button" aria-pressed="true">Detail</a>
                                     <button class="btn btn-warning">Edit</button>
                                 </td>
                             </tr>
