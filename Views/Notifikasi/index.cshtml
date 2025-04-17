@@ -1,190 +1,196 @@
 ﻿@{
-    ViewBag.Title = "index";
-    ViewBag.subTitle = "Notifikasi";
-    ViewBag.pageTitle = "Lexa";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "index";
+	ViewBag.subTitle = "Notifikasi";
+	ViewBag.pageTitle = "Lexa";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <meta charset="utf-8" />
-    <title>Notifications</title>
-    <style>      
-        .container {
-            background: white;
-            border: 1px solid #cfd8dc;
-            border-radius: 8px;
-            padding: 30px;
-            max-width: 800px;
-            margin: auto;
-        }
+<meta charset="utf-8" />
+<title>Notifications</title>
+<style>
+	.container {
+		background: white;
+		border: 1px solid #cfd8dc;
+		border-radius: 8px;
+		padding: 30px;
+		max-width: 800px;
+		margin: auto;
+	}
 
-        h2 {
-            font-size: 26px;
-            font-weight: 700;
-        }
+	h2 {
+		font-size: 26px;
+		font-weight: 700;
+	}
 
-        .breadcrumb {
-            margin-bottom: 10px;
-            color: #3b3b3b;
-            font-size: 14px;
-        }
+	.breadcrumb {
+		margin-bottom: 10px;
+		color: #3b3b3b;
+		font-size: 14px;
+	}
 
-            .breadcrumb a {
-                text-decoration: none;
-                color: #333;
-            }
+		.breadcrumb a {
+			text-decoration: none;
+			color: #333;
+		}
 
-        .tabs {
-            margin-top: 20px;
-            display: flex;
-            gap: 20px;
-            font-weight: 600;
-            font-size: 16px;
-        }
+	.tabs {
+		margin-top: 20px;
+		display: flex;
+		gap: 20px;
+		font-weight: 600;
+		font-size: 16px;
+	}
 
-            .tabs span {
-                cursor: pointer;
-                padding-bottom: 6px;
-                border-bottom: 2px solid transparent;
-            }
+		.tabs span {
+			cursor: pointer;
+			padding-bottom: 6px;
+			border-bottom: 2px solid transparent;
+		}
 
-            .tabs .active {
-                color: #6366F1;
-                border-color: #6366F1;
-            }
+		.tabs .active {
+			color: #6366F1;
+			border-color: #6366F1;
+		}
 
-        .notification-item {
-            padding: 20px 0;
-            border-bottom: 1px solid #e0e0e0;
-            display: flex;
-            justify-content: space-between;
-        }
+	.notification-item {
+		padding: 20px 0;
+		border-bottom: 1px solid #e0e0e0;
+		display: flex;
+		justify-content: space-between;
+	}
 
-        .left {
-            flex-grow: 1;
-        }
+	.left {
+		flex-grow: 1;
+	}
 
-        .dot {
-            height: 10px;
-            width: 10px;
-            background-color: #4f46e5;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 5px;
-        }
+	.dot {
+		height: 10px;
+		width: 10px;
+		background-color: #4f46e5;
+		border-radius: 50%;
+		display: inline-block;
+		margin-right: 5px;
+	}
 
-        .sender {
-            display: flex;
-            align-items: center;
-            margin-top: 5px;
-            gap: 6px;
-            font-weight: bold;
-        }
+	.sender {
+		display: flex;
+		align-items: center;
+		margin-top: 5px;
+		gap: 6px;
+		font-weight: bold;
+	}
 
-            .sender small {
-                font-weight: normal;
-                color: #777;
-            }
+		.sender small {
+			font-weight: normal;
+			color: #777;
+		}
 
-        .message {
-            margin-top: 5px;
-            color: #b91c1c;
-            font-size: 14px;
-        }
+	.message {
+		margin-top: 5px;
+		color: #b91c1c;
+		font-size: 14px;
+	}
 
-        .arrow {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            border: 1px solid #aaa;
-            color: #555;
-            font-size: 18px;
-        }
-    </style>
+	.arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		border: 1px solid #aaa;
+		color: #555;
+		font-size: 18px;
+	}
+</style>
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body"
+				<div class="breadcrumb">
+				<a href="#">Home</a> → <strong>Notification</strong>
+				</div>
+				<div class="card-footer">
 
-    <div class="breadcrumb">
-        <a href="#">Home</a> → <strong>Notification</strong>
-    </div>
+				<h2>Notifications</h2>
+					<div class="tabs">
+					<span class="tab active" onclick="switchTab('all')">ALL</span>
+					<span class="tab" onclick="switchTab('unread')">Unread</span>
+					<span class="tab" onclick="switchTab('read')">Read</span>
+				</div>
+		<div id="notification-list" class="mt-4"></div>
+		</div>
 
-    <div class="container">
-        <h2>Notifications</h2>
-        <div class="tabs">
-            <span class="tab active" onclick="switchTab('all')">ALL</span>
-            <span class="tab" onclick="switchTab('unread')">Unread</span>
-            <span class="tab" onclick="switchTab('read')">Read</span>
-        </div>
+	</div>
+		</div>
+	</div>
+</div>
+<script>
+	const notifications = [
+		{
+			Title: "Permintaan Barang Berupa Dust Mask N95",
+			Sender: "Evan Flores",
+			CreatedAt: "2025-04-15T08:00:00",
+			Message: "",
+			IsRead: false,
+			Type: "request"
+		},
+		{
+			Title: "Pemasukkan Barang Berupa Sarung Tangan",
+			Sender: "Super Admin",
+			CreatedAt: "2025-04-14T10:00:00",
+			Message: "",
+			IsRead: true,
+			Type: "info"
+		},
+	];
 
-        <div id="notification-list" class="mt-4"></div>
-    </div>
+	function formatTimeAgo(dateStr) {
+		const date = new Date(dateStr);
+		const now = new Date();
+		const diff = Math.floor((now - date) / 3600000);
 
-    <script>
-        const notifications = [
-            {
-                Title: "Permintaan Barang Berupa Dust Mask N95",
-                Sender: "Evan Flores",
-                CreatedAt: "2025-04-15T08:00:00",
-                Message: "",
-                IsRead: false,
-                Type: "request"
-            },
-            {
-                Title: "Pemasukkan Barang Berupa Sarung Tangan",
-                Sender: "Super Admin",
-                CreatedAt: "2025-04-14T10:00:00",
-                Message: "",
-                IsRead: true,
-                Type: "info"
-            },           
-        ];
+		if (diff < 1) return "Baru saja";
+		if (diff < 24) return `Sekitar ${diff} jam yang lalu`;
+		return `Sekitar ${Math.floor(diff / 24)} hari yang lalu`;
+	}
 
-        function formatTimeAgo(dateStr) {
-            const date = new Date(dateStr);
-            const now = new Date();
-            const diff = Math.floor((now - date) / 3600000);
+	function switchTab(tab) {
+		document.querySelectorAll(".tab").forEach(el => el.classList.remove("active"));
+		document.querySelector(`.tab[onclick="switchTab('${tab}')"]`).classList.add("active");
 
-            if (diff < 1) return "Baru saja";
-            if (diff < 24) return `Sekitar ${diff} jam yang lalu`;
-            return `Sekitar ${Math.floor(diff / 24)} hari yang lalu`;
-        }
+		let filtered = notifications;
+		if (tab === "unread") filtered = notifications.filter(n => !n.IsRead);
+		else if (tab === "read") filtered = notifications.filter(n => n.IsRead);
 
-        function switchTab(tab) {
-            document.querySelectorAll(".tab").forEach(el => el.classList.remove("active"));
-            document.querySelector(`.tab[onclick="switchTab('${tab}')"]`).classList.add("active");
+		const container = document.getElementById("notification-list");
+		container.innerHTML = "";
 
-            let filtered = notifications;
-            if (tab === "unread") filtered = notifications.filter(n => !n.IsRead);
-            else if (tab === "read") filtered = notifications.filter(n => n.IsRead);
+		if (filtered.length === 0) {
+			container.innerHTML = "<p class='text-gray-500'>Tidak ada notifikasi.</p>";
+			return;
+		}
 
-            const container = document.getElementById("notification-list");
-            container.innerHTML = "";
+		filtered.forEach(n => {
+			let icon = "";
+			if (n.Type === "request") icon = "🧑‍💼";
+			else if (n.Type === "warning") icon = "❗";
+			else icon = "📦";
 
-            if (filtered.length === 0) {
-                container.innerHTML = "<p class='text-gray-500'>Tidak ada notifikasi.</p>";
-                return;
-            }
+			const item = document.createElement("div");
+			item.className = "notification-item";
+			item.innerHTML = `
+				<div class="left">
+					<div><span class="dot"></span> ${n.Title}</div>
+					${n.Sender ? `<div class="sender">${icon} <span>${n.Sender}</span><small>${formatTimeAgo(n.CreatedAt)}</small></div>` : ""}
+					${n.Message ? `<div class="message">${n.Message}</div>` : ""}
+				</div>
+				<div class="arrow">➔</div>
+			`;
+			container.appendChild(item);
+		});
+	}
 
-            filtered.forEach(n => {
-                let icon = "";
-                if (n.Type === "request") icon = "🧑‍💼";
-                else if (n.Type === "warning") icon = "❗";
-                else icon = "📦";
-
-                const item = document.createElement("div");
-                item.className = "notification-item";
-                item.innerHTML = `
-                    <div class="left">
-                        <div><span class="dot"></span> ${n.Title}</div>
-                        ${n.Sender ? `<div class="sender">${icon} <span>${n.Sender}</span><small>${formatTimeAgo(n.CreatedAt)}</small></div>` : ""}
-                        ${n.Message ? `<div class="message">${n.Message}</div>` : ""}
-                    </div>
-                    <div class="arrow">➔</div>
-                `;
-                container.appendChild(item);
-            });
-        }
-
-        switchTab("all");
-    </script>
+	switchTab("all");
+</script>
 
