@@ -44,6 +44,32 @@ button,a {
   }
 }
 
+.btn-base {
+  background-color: #2b3a4a;
+  border-color: #2b3a4a;
+  color: #ffffff;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.disabled,
+  &:disabled {
+      background-color: #2b3a4a;
+      border-color: #2b3a4a;
+      color: #ffffff;
+      &:focus {
+          box-shadow: 0 0 0 $btn-focus-width #2b3a4a;
+          background-color: #2b3a4a;
+          border-color: #2b3a4a;
+          color: #ffffff;
+      }
+      &:active {
+          background-color: #182028;
+          border-color: #182028;
+          color: #ffffff;
+      }
+  }
+}
 
 .btn-outline-primary {
   color: var(--bs-primary);

@@ -1,223 +1,221 @@
 ﻿@{
-    ViewBag.Title = "DASHBOARD";
-    ViewBag.subTitle = "Dashboard";
-    ViewBag.pageTitle = "Lexa";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "DASHBOARD";
+	ViewBag.subTitle = "Dashboard";
+	ViewBag.pageTitle = "SIGAP";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section scripts {
-    <script src="~/assets/libs/morris.js/morris.min.js"></script>
-    <script src="~/assets/libs/raphael/raphael.min.js"></script>
-
-    <script src="~/assets/js/pages/dashboard.init.js"></script>
-    <script src="~/assets/js/app.js"></script>
+	<script src="~/assets/libs/morris.js/morris.min.js"></script>
+	<script src="~/assets/libs/raphael/raphael.min.js"></script>
+	<script src="~/assets/js/pages/dashboard.init.js"></script>
+	<script src="~/assets/js/app.js"></script>
 }
 
-    <!--menu-->
-    <div class="row card-deck container-fluid">
-       <!--menu-->
-       <div class="col-xl-3 col-sm-6 d-flex">
-           <div class="card mini-stat bg-primary flex-fill">
-               <div class="card-body mini-stat-img">
-                   <div class="mini-stat-icon">
-                       <i class="mdi mdi-folder-download-outline float-end"></i>
-                   </div>
-                   <div class="text-white">
-                       <h6 class="text-uppercase mb-3 font-size-16 text-white">Total Pemasukkan Barang</h6>
-                       <h2 class="mb-4 text-white">1,587</h2>
-                       <span class="badge bg-info"> +11% </span> <span class="ms-2">
-                           From previous
-                           period
-                       </span>
-                   </div>
-               </div>
-               <div class="card-footer text-center bg-secondary">
-                   <a href="#" class="small-box-footer text-white">More info <i class="fas fa-arrow-circle-right"></i></a>
-               </div>
-           </div>
-       </div>
-       <!--menu-->
-       <div class="col-xl-3 col-sm-6 d-flex">
-           <div class="card mini-stat bg-primary flex-fill">
-               <div class="card-body mini-stat-img">
-                   <div class="mini-stat-icon">
-                       <i class="mdi mdi-folder-upload-outline float-end"></i>
-                   </div>
-                   <div class="text-white">
-                       <h6 class="text-uppercase mb-3 font-size-16 text-white">Jumlah Permintaan Barang</h6>
-                       <h2 class="mb-4 text-white">$46,782</h2>
-                       <span class="badge bg-danger"> -29% </span> <span class="ms-2">
-                           From previous
-                           period
-                       </span>
-                   </div>
-               </div>
-               <div class="card-footer text-center bg-secondary">
-                   <a href="#" class="small-box-footer text-white">More info <i class="fas fa-arrow-circle-right"></i></a>
-               </div>
-           </div>
-       </div>
-       <!--menu-->
-       <div class="col-xl-3 col-sm-6 d-flex">
-           <div class="card mini-stat bg-primary flex-fill">
-               <div class="card-body mini-stat-img">
-                   <div class="mini-stat-icon">
-                       <i class="mdi mdi-clock-outline float-end"></i>
-                   </div>
-                   <div class="text-white">
-                       <h6 class="text-uppercase mb-3 font-size-16 text-white">Jumlah Permintaan Menunggu</h6>
-                       <h2 class="mb-4 text-white">$15.9</h2>
-                       <span class="badge bg-warning"> 0% </span> <span class="ms-2">
-                           From previous
-                           period
-                       </span>
-                   </div>
-               </div>
-               <div class="card-footer text-center bg-secondary">
-                   <a href="#" class="small-box-footer text-white">More info <i class="fas fa-arrow-circle-right"></i></a>
-               </div>
-           </div>
-       </div>
-       <!--menu-->
-       <div class="col-xl-3 col-sm-6 d-flex">
-           <div class="card mini-stat bg-primary flex-fill">
-               <div class="card-body mini-stat-img">
-                   <div class="mini-stat-icon">
-                       <i class="mdi mdi-alert-outline float-end"></i>
-                   </div>
-                   <div class="text-white">
-                       <h6 class="text-uppercase mb-3 font-size-16 text-white">Peringatan Stock Barang Rendah</h6>
-                       <h2 class="mb-4 text-white">1890</h2>
-                       <span class="badge bg-info"> +89% </span> <span class="ms-2">
-                           From previous
-                           period
-                       </span>
-                   </div>
-               </div>
-               <div class="card-footer text-center bg-secondary">
-                   <a href="#" class="small-box-footer text-white">More info <i class="fas fa-arrow-circle-right"></i></a>
-               </div>
-           </div>
-       </div>
-    </div>
-    
+<!--menu-->
+<div class="row card-deck">
+	<!--menu-->
+	<div class="col-xl-3 col-sm-6 d-flex">
+		<div class="card mini-stat flex-fill gradient blue-gradient">
+			<div class="card-body mini-stat-img">
+				<div class="mini-stat-icon">
+					<i class="mdi mdi-folder-download-outline float-end"></i>
+				</div>
+				<div class="text-white">
+					<h6 class="text-uppercase mb-3 font-size-16 text-white">Total Pemasukkan Barang</h6>
+					<h2 class="text-white">666</h2>
+				</div>
+			</div>
+			<div class="card-footer text-center card-footer-bg-color">
+				<a href="#" class="text-white">Lebih Lanjut <i class="fas fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+	</div>
+	<!--menu-->
+	<div class="col-xl-3 col-sm-6 d-flex">
+		<div class="card mini-stat flex-fill gradient green-gradient">
+			<div class="card-body mini-stat-img">
+				<div class="mini-stat-icon">
+					<i class="mdi mdi-folder-upload-outline float-end"></i>
+				</div>
+				<div class="text-white">
+					<h6 class="text-uppercase mb-3 font-size-16 text-white">Jumlah Permintaan Barang</h6>
+					<h2 class="text-white">101</h2>
+				</div>
+			</div>
+			<div class="card-footer text-center card-footer-bg-color">
+				<a href="#" class="text-white">Lebih Lanjut <i class="fas fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+	</div>
+	<!--menu-->
+	<div class="col-xl-3 col-sm-6 d-flex">
+		<div class="card mini-stat flex-fill gradient orange-gradient">
+			<div class="card-body mini-stat-img">
+				<div class="mini-stat-icon">
+					<i class="mdi mdi-clock-outline float-end"></i>
+				</div>
+				<div class="text-white">
+					<h6 class="text-uppercase mb-3 font-size-16 text-white">Jumlah Permintaan Menunggu</h6>
+					<h2 class="text-white">1234</h2>
+				</div>
+			</div>
+			<div class="card-footer text-center card-footer-bg-color">
+				<a href="#" class="text-white">Lebih Lanjut <i class="fas fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+	</div>
+	<!--menu-->
+	<div class="col-xl-3 col-sm-6 d-flex">
+		<div class="card mini-stat flex-fill gradient red-gradient">
+			<div class="card-body mini-stat-img">
+				<div class="mini-stat-icon">
+					<i class="mdi mdi-alert-outline float-end"></i>
+				</div>
+				<div class="text-white">
+					<h6 class="text-uppercase mb-3 font-size-16 text-white">Peringatan Stock Barang Rendah</h6>
+					<h2 class="text-white">1890</h2>
+				</div>
+			</div>
+			<div class="card-footer text-center card-footer-bg-color">
+				<a href="#" class="text-white">Lebih Lanjut <i class="fas fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 @* <!--Aktivitas Pemasukkan Terbaru--> *@
-<div class="row mb4 card-deck container-fluid">
-    <div class="col-xl-3">
-        <div class="card">
-            <div class="card-body">
-    <div class="mt-5">
-                    <h5 class="font-size-14 mb-4">Aktivitas Pemasukkan Terbaru :</h5>
+<div class="row mb4 card-deck">
+	<div class="col-xl-4 d-flex">
+		<div class="card flex-fill">
+			<div class="card-body">
+				<h5 class="font-size-14 mb-4">Aktivitas Pemasukkan Terbaru :</h5>
 
-        <ul class="list-unstyled activity-feed ms-1">
-            <li class="feed-item">
-                <div class="feed-item-list">
-                    <div>
-                        <div class="date">15 Jul</div>
-                        <p class="activity-text mb-0">Responded to need “Volunteer Activities”</p>
-                    </div>
-                </div>
-            </li>
+				<ul class="list-unstyled activity-feed ms-1">
+					<li class="feed-item">
+						<div class="feed-item-list">
+							<div>
+								<div class="date">15 Jul</div>
+								<p class="activity-text mb-0">Responded to need “Volunteer Activities”</p>
+							</div>
+						</div>
+					</li>
 
-            <li class="feed-item">
-                <div class="feed-item-list">
-                    <div>
-                        <div class="date">14 Jul</div>
-                        <p class="activity-text mb-0">neque porro quisquam est <a href="javascript:void(0);" class="text-success">@("@")Christi</a> dolorem ipsum quia dolor sit amet</p>
-                    </div>
-                </div>
-            </li>
-            <li class="feed-item">
-                <div class="feed-item-list">
-                    <div>
-                        <div class="date">14 Jul</div>
-                        <p class="activity-text mb-0">Sed ut perspiciatis unde omnis iste natus error sit “Volunteer Activities”</p>
-                    </div>
-                </div>
-            </li>
-            <li class="feed-item">
-                <div class="feed-item-list">
-                    <div>
-                        <div class="date">13 Jul</div>
-                        <p class="activity-text mb-0">Responded to need “Volunteer Activities”</p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-            </div>
-        </div>
-    </div>
-    <!-- Readiness Percentage-->
-    <div class="col-xl-6 d-flex">
-        <div class="card flex-fill">
-            <div class="card-body">
-                <h4 class="card-title">Readiness: Barang</h4>
+					<li class="feed-item">
+						<div class="feed-item-list">
+							<div>
+								<div class="date">14 Jul</div>
+								<p class="activity-text mb-0">neque porro quisquam est <a href="javascript:void(0);" class="text-success">@("@")Christi</a> dolorem ipsum quia dolor sit amet</p>
+							</div>
+						</div>
+					</li>
+					<li class="feed-item">
+						<div class="feed-item-list">
+							<div>
+								<div class="date">14 Jul</div>
+								<p class="activity-text mb-0">Sed ut perspiciatis unde omnis iste natus error sit “Volunteer Activities”</p>
+							</div>
+						</div>
+					</li>
+					<li class="feed-item">
+						<div class="feed-item-list">
+							<div>
+								<div class="date">13 Jul</div>
+								<p class="activity-text mb-0">Responded to need “Volunteer Activities”</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="d-flex justify-content-center">
+					<a href="#" class="btn btn-base">Lihat Semua <i class="fas fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
 
-              @*   <div class="row text-center mt-4">
-                    <div class="col-6">
-                        <h5 class="font-size-20">$56241</h5> F
-                        <p class="text-muted">Marketplace</p>
-                    </div>
-                    <div class="col-6">
-                        <h5 class="font-size-20">$23651</h5>
-                        <p class="text-muted">Total Income</p>
-                    </div>
-                </div> *@
+	<div class="col-xl-4 d-flex">
+		<div class="card flex-fill d-flex flex-column justify-content-center">
+			<div class="card-body d-flex flex-column justify-content-between">
+				<h4 class="card-title">Readiness: Barang</h4>
 
-                <div class="d-flex justify-content-center align-items-center" style="height: 90%; width: 100%;">  
-                   <div id="morris-donut-example" data-colors='["#f0f1f4","--bs-primary","--bs-info"]'  
-                        class="morris-charts" style="height: 400px; width: 400px;" dir="ltr"></div>  
-                </div>
-            </div>
-        </div>
-    </div>
-    @* <!--Aktivitas Pengeluaran Terbaru--> *@
-    <div class="col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="mt-5">
-                    <h5 class="font-size-14 mb-4">Aktivitas Pengeluaran Terbaru :</h5>
+				<a href="#" class="d-flex flex-column justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#donutModal">
+					<div id="morris-donut"
+						 data-colors='["#3BFF3B","#FF3B3E"]'
+						 class="morris-charts morris-donut"
+						 dir="ltr">
+					</div>
+					<p class="text-black">Klik untuk melihat detail</p>
+				</a>
 
-                    <ul class="list-unstyled activity-feed ms-1">
-                        <li class="feed-item">
-                            <div class="feed-item-list">
-                                <div>
-                                    <div class="date">15 Jul</div>
-                                    <p class="activity-text mb-0">Responded to need “Volunteer Activities”</p>
-                                </div>
-                            </div>
-                        </li>
+				<div class="hidden_element"></div>
+			</div>
+		</div>
+	</div>
 
-                        <li class="feed-item">
-                            <div class="feed-item-list">
-                                <div>
-                                    <div class="date">14 Jul</div>
-                                    <p class="activity-text mb-0">neque porro quisquam est <a href="javascript:void(0);" class="text-success">@("@")Christi</a> dolorem ipsum quia dolor sit amet</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="feed-item">
-                            <div class="feed-item-list">
-                                <div>
-                                    <div class="date">14 Jul</div>
-                                    <p class="activity-text mb-0">Sed ut perspiciatis unde omnis iste natus error sit “Volunteer Activities”</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="feed-item">
-                            <div class="feed-item-list">
-                                <div>
-                                    <div class="date">13 Jul</div>
-                                    <p class="activity-text mb-0">Responded to need “Volunteer Activities”</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+	@* <!--Aktivitas Pengeluaran Terbaru--> *@
+	<div class="col-xl-4 d-flex">
+		<div class="card flex-fill">
+			<div class="card-body">
+				<h5 class="font-size-14 mb-4">Aktivitas Pengeluaran Terbaru :</h5>
+
+				<ul class="list-unstyled activity-feed ms-1">
+					<li class="feed-item">
+						<div class="feed-item-list">
+							<div>
+								<div class="date">15 Jul</div>
+								<p class="activity-text mb-0">Responded to need “Volunteer Activities”</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="feed-item">
+						<div class="feed-item-list">
+							<div>
+								<div class="date">14 Jul</div>
+								<p class="activity-text mb-0">neque porro quisquam est <a href="javascript:void(0);" class="text-success">@("@")Christi</a> dolorem ipsum quia dolor sit amet</p>
+							</div>
+						</div>
+					</li>
+					<li class="feed-item">
+						<div class="feed-item-list">
+							<div>
+								<div class="date">14 Jul</div>
+								<p class="activity-text mb-0">Sed ut perspiciatis unde omnis iste natus error sit “Volunteer Activities”</p>
+							</div>
+						</div>
+					</li>
+					<li class="feed-item">
+						<div class="feed-item-list">
+							<div>
+								<div class="date">13 Jul</div>
+								<p class="activity-text mb-0">Responded to need “Volunteer Activities”</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="d-flex justify-content-center">
+					<a href="#" class="btn btn-base">Lihat Semua <i class="fas fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="donutModal" tabindex="-1" role="dialog" aria-labelledby="donutModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="donutModalLabel">Detail Readiness</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<!-- Modal content -->
+				Sementara
+			</div>
+		</div>
+	</div>
+</div>
+
 <!-- end row -->

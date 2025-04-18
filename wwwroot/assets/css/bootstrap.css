@@ -55,6 +55,39 @@ File: Custom Bootstrap Css File
   --bs-info-rgb: 54, 80, 139 !important;
 }
 
+.color-base {
+  color: #2B3A4A;
+}
+
+.bg-base {
+  background-color: #2B3A4A;
+}
+
+.card-footer-bg-color {
+  background-color: #2B3A4A;
+}
+
+.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2B3A4A), to(var(--gradient-color)));
+  background: linear-gradient(to bottom, #2B3A4A, var(--gradient-color));
+}
+
+.blue-gradient {
+  --gradient-color: blue;
+}
+
+.green-gradient {
+  --gradient-color: #39AE68;
+}
+
+.orange-gradient {
+  --gradient-color: #FFAE00;
+}
+
+.red-gradient {
+  --gradient-color: #FF3B3E;
+}
+
 /*!
  * Bootstrap  v5.3.5 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -13973,6 +14006,29 @@ button, a {
 .btn-primary:hover:focus, .btn-primary:focus:focus, .btn-primary:active:focus, .btn-primary.disabled:focus, .btn-primary:disabled:focus {
   -webkit-box-shadow: 0 0 0 0.15rem var(--bs-primary);
           box-shadow: 0 0 0 0.15rem var(--bs-primary);
+}
+
+.btn-base {
+  background-color: #2b3a4a;
+  border-color: #2b3a4a;
+  color: #ffffff;
+}
+.btn-base:hover, .btn-base:focus, .btn-base:active, .btn-base.disabled, .btn-base:disabled {
+  background-color: #2b3a4a;
+  border-color: #2b3a4a;
+  color: #ffffff;
+}
+.btn-base:hover:focus, .btn-base:focus:focus, .btn-base:active:focus, .btn-base.disabled:focus, .btn-base:disabled:focus {
+  -webkit-box-shadow: 0 0 0 0.15rem #2b3a4a;
+          box-shadow: 0 0 0 0.15rem #2b3a4a;
+  background-color: #2b3a4a;
+  border-color: #2b3a4a;
+  color: #ffffff;
+}
+.btn-base:hover:active, .btn-base:focus:active, .btn-base:active:active, .btn-base.disabled:active, .btn-base:disabled:active {
+  background-color: #182028;
+  border-color: #182028;
+  color: #ffffff;
 }
 
 .btn-outline-primary {
