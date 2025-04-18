@@ -55,6 +55,39 @@ File: Main Css File
   --bs-info-rgb: 54, 80, 139 !important;
 }
 
+.color-base {
+  color: #2B3A4A;
+}
+
+.bg-base {
+  background-color: #2B3A4A;
+}
+
+.card-footer-bg-color {
+  background-color: #2B3A4A;
+}
+
+.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2B3A4A), to(var(--gradient-color)));
+  background: linear-gradient(to bottom, #2B3A4A, var(--gradient-color));
+}
+
+.blue-gradient {
+  --gradient-color: blue;
+}
+
+.green-gradient {
+  --gradient-color: #39AE68;
+}
+
+.orange-gradient {
+  --gradient-color: #FFAE00;
+}
+
+.red-gradient {
+  --gradient-color: #FF3B3E;
+}
+
 #page-topbar {
   position: fixed;
   top: 0;
@@ -647,6 +680,9 @@ body[data-layout=horizontal] .footer {
 .vertical-collpsed .vertical-menu #sidebar-menu .has-arrow:after {
   display: none;
 }
+.vertical-collpsed .vertical-menu #sidebar-menu .arrow-user:after {
+  display: none;
+}
 .vertical-collpsed .vertical-menu #sidebar-menu > ul > li {
   position: relative;
   white-space: nowrap;
@@ -665,6 +701,23 @@ body[data-layout=horizontal] .footer {
   margin-left: 4px;
 }
 .vertical-collpsed .vertical-menu #sidebar-menu > ul > li > a span {
+  display: none;
+  padding-left: 25px;
+}
+.vertical-collpsed .vertical-menu #sidebar-menu > ul > li > a:has(.header-profile-user) {
+  padding: 15px 18px;
+  min-height: 55px;
+  -webkit-transition: none;
+  transition: none;
+}
+.vertical-collpsed .vertical-menu #sidebar-menu > ul > li > a:has(.header-profile-user):hover, .vertical-collpsed .vertical-menu #sidebar-menu > ul > li > a:has(.header-profile-user):active, .vertical-collpsed .vertical-menu #sidebar-menu > ul > li > a:has(.header-profile-user):focus {
+  color: var(--bs-sidebar-menu-item-hover-color);
+}
+.vertical-collpsed .vertical-menu #sidebar-menu > ul > li > a:has(.header-profile-user) i {
+  font-size: 1.45rem;
+  margin-left: 4px;
+}
+.vertical-collpsed .vertical-menu #sidebar-menu > ul > li > a:has(.header-profile-user) span {
   display: none;
   padding-left: 25px;
 }
@@ -834,6 +887,9 @@ body[data-sidebar-size=small] .vertical-menu .has-arrow:after,
 body[data-sidebar-size=small] .vertical-menu .badge {
   display: none !important;
 }
+body[data-sidebar-size=small] .vertical-menu .arrow-user:after {
+  display: none !important;
+}
 body[data-sidebar-size=small] .main-content {
   margin-left: 160px;
 }
@@ -939,6 +995,14 @@ body[data-sidebar=colored].vertical-collpsed .vertical-menu #sidebar-menu ul li 
 }
 [dir=rtl] #sidebar-menu .mm-active > .has-arrow:after {
   content: "\f0140";
+}
+[dir=rtl] #sidebar-menu .arrow-user:after {
+  content: "\f0141";
+}
+[dir=rtl] #sidebar-menu .mm-active .arrow-user:after {
+  content: "\f0140";
+  font-family: "Material Design Icons";
+  font-style: normal;
 }
 
 .hr-sidemenu {
@@ -2243,6 +2307,7 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
 }
 .activity-feed .feed-item:last-child {
   border-color: transparent;
+  padding-bottom: 0px;
 }
 .activity-feed .feed-item::after {
   content: "";
@@ -2254,7 +2319,7 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
   height: 10px;
   border-radius: 6px;
   background: #fff;
-  border: 4px solid var(--bs-primary);
+  border: 4px solid #2B3A4A;
 }
 .activity-feed .feed-item .feed-item-list {
   padding: 12px 20px;
@@ -3605,6 +3670,30 @@ div.dataTables_wrapper div.dataTables_filter input {
   color: #fff;
 }
 
+.morris-donut svg path {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.morris-donut {
+  width: 250px;
+  height: 250px;
+}
+
+@media (min-width: 340px) {
+  .morris-donut {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (min-width: 500px) {
+  .col-xl-6 .morris-donut {
+    width: 400px;
+    height: 400px;
+  }
+}
 .ct-golden-section:before {
   float: none;
 }

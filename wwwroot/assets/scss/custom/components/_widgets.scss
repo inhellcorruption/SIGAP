@@ -87,6 +87,7 @@
   
       &:last-child {
         border-color: transparent;
+        padding-bottom: 0px;
       }
   
       &::after {
@@ -99,7 +100,8 @@
         height: 10px;
         border-radius: 6px;
         background: $white;
-        border: 4px solid var(--#{$prefix}primary);
+        border: 4px solid #2B3A4A;
+        //border: 4px solid var(--#{$prefix}primary);
       }
   
       .feed-item-list{

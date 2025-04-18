@@ -40,3 +40,28 @@
         }
     }
 }
+
+.morris-donut svg path {
+    transform: scaleY(-1);
+    transform-origin: center center;
+}
+
+.morris-donut {
+    width: 250px;
+    height: 250px;
+}
+
+@media (min-width: 340px) {
+    .morris-donut {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 500px) {
+    .col-xl-6 .morris-donut {
+        width: 400px;
+        height: 400px;
+    }
+}
+

@@ -167,11 +167,11 @@ function ChartColorChangeSparkLine(series, chartupdate, chartId) {
     }
 
     function initDropdownMenu() {
-        if(document.getElementById("topnav-menu-content")){
+        if (document.getElementById("topnav-menu-content")) {
             var elements = document.getElementById("topnav-menu-content").getElementsByTagName("a");
-            for(var i = 0, len = elements.length; i < len; i++) {
+            for (var i = 0, len = elements.length; i < len; i++) {
                 elements[i].onclick = function (elem) {
-                    if(elem.target.getAttribute("href") === "#") {
+                    if (elem.target.getAttribute("href") === "#") {
                         elem.target.parentElement.classList.toggle("active");
                         elem.target.nextElementSibling.classList.toggle("show");
                     }
@@ -183,8 +183,8 @@ function ChartColorChangeSparkLine(series, chartupdate, chartId) {
 
     function updateMenu() {
         var elements = document.getElementById("topnav-menu-content").getElementsByTagName("a");
-        for(var i = 0, len = elements.length; i < len; i++) {
-            if(elements[i].parentElement.getAttribute("class") === "nav-item dropdown active") {
+        for (var i = 0, len = elements.length; i < len; i++) {
+            if (elements[i].parentElement.getAttribute("class") === "nav-item dropdown active") {
                 elements[i].parentElement.classList.remove("active");
                 elements[i].nextElementSibling.classList.remove("show");
             }
@@ -238,7 +238,7 @@ function ChartColorChangeSparkLine(series, chartupdate, chartId) {
 
 
 
-   
+
     function initHeaderCharts() {
         var header1Chart1Colors = getChartColorsArray("header-chart-1");
         if (header1Chart1Colors) {
@@ -251,7 +251,7 @@ function ChartColorChangeSparkLine(series, chartupdate, chartId) {
                 barColor: header1Chart1Colors
             };
             var demo = $('#header-chart-1').sparkline(series, chartoption);
-            ChartColorChangeSparkLine(series,chartoption,'header-chart-1');
+            ChartColorChangeSparkLine(series, chartoption, 'header-chart-1');
         }
 
         var header2Chart1Colors = getChartColorsArray("header-chart-2");
@@ -265,7 +265,7 @@ function ChartColorChangeSparkLine(series, chartupdate, chartId) {
                 barColor: header2Chart1Colors
             };
             var demo = $('#header-chart-2').sparkline(series, chartoption);
-            ChartColorChangeSparkLine(series,chartoption,'header-chart-2');
+            ChartColorChangeSparkLine(series, chartoption, 'header-chart-2');
         }
     }
 
@@ -294,9 +294,9 @@ function ChartColorChangeSparkLine(series, chartupdate, chartId) {
             sessionStorage.setItem("is_visited", "rtl-mode-switch");
         }
     }
- 
 
-  
+
+
     function init() {
         initMetisMenu();
         initLeftMenuCollapse();

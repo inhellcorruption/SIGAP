@@ -1,6 +1,9 @@
 
 //  default
 [data-theme-mode="default"] {
+    //--bs-primary: #2b3a4a !important;
+    //--bs-primary-rgb: 43, 58, 74 !important;
+
     --bs-danger: #ef6767 !important;
     --bs-danger-rgb: 239,103,103 !important;
 }
@@ -65,3 +68,22 @@
     --bs-info: #36508b !important;
     --bs-info-rgb: 54, 80, 139 !important;
 }
+
+//=======================================================================================================
+
+// Custom colors for SIGAP
+
+$base-color: #2B3A4A;
+
+.color-base { color: $base-color }
+.bg-base { background-color: $base-color }
+.card-footer-bg-color { background-color: $base-color }
+
+.gradient {
+    background: linear-gradient(to bottom, $base-color, var(--gradient-color));
+}
+
+.blue-gradient    { --gradient-color: blue; }
+.green-gradient   { --gradient-color: #39AE68; }
+.orange-gradient  { --gradient-color: #FFAE00; }
+.red-gradient     { --gradient-color: #FF3B3E; }

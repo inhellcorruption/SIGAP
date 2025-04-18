@@ -241,7 +241,13 @@
                 height: inherit !important;
             }
 
-            .has-arrow {
+            .has-arrow{
+                &:after {
+                    display: none;
+                }
+            }
+
+            .arrow-user {
                 &:after {
                     display: none;
                 }
@@ -254,6 +260,28 @@
 
                     > a {
                         padding: 15px 20px;
+                        min-height: 55px;
+                        transition: none;
+                        
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            color: var(--#{$prefix}sidebar-menu-item-hover-color);
+                        }
+
+                        i {
+                            font-size: 1.45rem;
+                            margin-left: 4px;
+                        }
+
+                        span {
+                            display: none;
+                            padding-left: 25px;
+                        }
+                    }
+
+                    > a:has(.header-profile-user) {
+                        padding: 15px 18px;
                         min-height: 55px;
                         transition: none;
                         
@@ -525,6 +553,11 @@ body[data-sidebar-size="small"] {
         .badge {
             display: none !important;
         }
+        .arrow-user {
+            &:after {
+                display: none !important;
+            }
+        }
     }
     .main-content {
         margin-left: $sidebar-width-sm;
@@ -700,17 +733,33 @@ body[data-sidebar="colored"] {
 }
 
 // RTL
-[dir="rtl"] 
-#sidebar-menu {
-    .has-arrow{
-        &:after{
-            content: "\F0141";
+[dir="rtl"] {
+    #sidebar-menu {
+        .has-arrow{
+            &:after{
+                content: "\F0141";
+            }
         }
-    }
-    .mm-active {
-        >.has-arrow {
-            &:after {
-                content: "\F0140";
+        .mm-active {
+            >.has-arrow{
+                &:after {
+                    content: "\F0140";
+                }
+            }
+        }
+
+        .arrow-user {
+            &:after{
+                content: "\F0141";
+            }
+        }
+        .mm-active {
+            .arrow-user {
+                &:after {
+                    content: "\F0140";
+                    font-family: 'Material Design Icons';
+                    font-style: normal;
+                }
             }
         }
     }

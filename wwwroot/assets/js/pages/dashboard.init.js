@@ -98,14 +98,28 @@ function ChartColorChangeSparkLine(series, chartupdate, chartId) {
     },
 
     //creates Donut chart
-    Dashboard.prototype.createDonutChart = function (element, data, colors) {
+    Dashboard.prototype.createDonutChart = function (element, data, colors, select) {
+        var total = data.reduce((sum, item) => sum + item.value, 0);
         var donutChart = Morris.Donut({
             element: element,
             data: data,
             resize: true,
-            colors: colors
+            colors: colors,
+            formatter: function (value) {
+                return Math.round((value / total) * 100) + '%';
+            },
+        //    click: function (i, row) {
+        //        console.log('Clicked donut segment:', row);
+
+        //        const donutModal = new bootstrap.Modal(document.getElementById('donutModal'));
+        //        donutModal.show();
+        //        //$('#donutModal').modal('show')
+        //    }
         });
-        ChartColorChange(donutChart,'morris-donut-example');
+        donutChart.select(select);
+        ChartColorChange(donutChart,'morris-donut');
+
+        //return donutChart;
     },
 
     //creates Stacked chart
@@ -142,14 +156,14 @@ function ChartColorChangeSparkLine(series, chartupdate, chartId) {
         this.createAreaChart('morris-area-example', 0, 0, $areaData, 'y', ['a', 'b', 'c'], ['Series A', 'Series B', 'Series C'], areaEXChartColors);
     }
         //creating donut chart
-        var donutEXChartColors = getChartColorsArray("morris-donut-example");
+        var donutEXChartColors = getChartColorsArray("morris-donut");
         if (donutEXChartColors) {
         var $donutData = [
-            {label: "Download Sales", value: 12},
-            {label: "In-Store Sales", value: 30},
-            {label: "Mail-Order Sales", value: 20}
+            {label: "Barang Tersedia", value: 156},
+            {label: "Tidak Tersedia", value: 44},
         ];
-        this.createDonutChart('morris-donut-example', $donutData, donutEXChartColors);
+        this.createDonutChart('morris-donut', $donutData, donutEXChartColors, 0);
+        //window.myDonut = this.createDonutChart('morris-donut', $donutData, donutEXChartColors, 0);
     }
 
         var barStackedChartColors = getChartColorsArray("morris-bar-stacked");
