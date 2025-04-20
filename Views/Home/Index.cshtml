@@ -1,7 +1,7 @@
 ﻿@{
-	ViewBag.Title = "DASHBOARD";
-	ViewBag.subTitle = "Dashboard";
-	ViewBag.pageTitle = "SIGAP";
+	ViewBag.Title = "Dashboard";
+	ViewBag.subTitle = "Home";
+	ViewBag.subTitleLink = "/";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -204,18 +204,191 @@
 
 <!-- Modal -->
 <div class="modal fade" id="donutModal" tabindex="-1" role="dialog" aria-labelledby="donutModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" style="max-width: 1000px">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title" id="donutModalLabel">Detail Readiness</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<!-- Modal content -->
-				Sementara
+				<table class="table table-striped table-bordered text-center align-middle">
+					<thead class="table-dark">
+						<tr>
+							<th style="width: 50px">Detail</th>
+							<th>Kategori</th>
+							<th>Readiness Stock</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Row 1 -->
+						@* <tr data-bs-toggle="collapse" data-bs-target="#category1" class="collapsed"> *@
+						@* <td><a href="#category1" data-bs-toggle="collapse" aria-expanded="false" aria-controls="category1"><i class="mdi mdi-chevron-right-circle text-black"></i></a></td> *@
+						<tr data-bs-toggle="collapse" data-bs-target="#category1">
+							@* <td><a href="#category1" data-bs-toggle="collapse" aria-expanded="false" aria-controls="category1"<i class="mdi mdi-custom mdi-arrow-right-drop-circle text-black"></i></a></td> *@
+							<td><a href="#category1" data-bs-toggle="collapse" aria-expanded="false" aria-controls="category1"><i class="mdi mdi-custom mdi-chevron-right text-black"></i></a></td>
+							<td class="text-start">Pelindung Tangan</td>
+							<td><span class="badge bg-danger">89%</span></td>
+						</tr>
+						<tr class="collapse" id="category1">
+							<td colspan="3" class="p-0">
+								<div class="collapse ps-custom" id="category1">
+									<table class="table table-bordered table-sm mb-0 align-middle nested-table">
+										<thead class="table-dark text-white">
+											<tr>
+												<th>No</th>
+												<th>Nama Material</th>
+												<th>Stock</th>
+												<th>MSL</th>
+												<th>Readiness Stock</th>
+											</tr>
+										</thead>
+										<tbody class="tbody-custom">
+											<tr><td>1</td><td>Sarung Tangan Kulit</td><td>0</td><td>500</td><td><span class="badge bg-danger">0%</span></td></tr>
+											<tr><td>2</td><td>Sarung Tangan Listrik</td><td>50</td><td>25</td><td><span class="badge bg-success">200%</span></td></tr>
+											<tr><td>3</td><td>Sarung Tangan Welder</td><td>611</td><td>100</td><td><span class="badge bg-success">611%</span></td></tr>
+											<tr><td>4</td><td>Sarung Tangan Mekanik</td><td>110</td><td>100</td><td><span class="badge bg-warning">87%</span></td></tr>
+											<tr><td>5</td><td>Sarung Tangan Drum Plant</td><td>202</td><td>250</td><td><span class="badge bg-danger">81%</span></td></tr>
+											<tr><td>6</td><td>Sarung Tangan Kain</td><td>3419</td><td>2500</td><td><span class="badge bg-success">137%</span></td></tr>
+											<tr><td>7</td><td>Sarung Tangan Alumunium</td><td>85</td><td>50</td><td><span class="badge bg-success">170%</span></td></tr>
+											<tr><td>8</td><td>Sarung Tangan Asbes</td><td>33</td><td>40</td><td><span class="badge bg-danger">83%</span></td></tr>
+											<tr><td>9</td><td>Sarung Tangan Tangan</td><td>2141</td><td>500</td><td><span class="badge bg-success">428%</span></td></tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+
+						<!-- Row 2 -->
+						@* <tr data-bs-toggle="collapse" data-bs-target="#category2" class="collapsed"> *@
+						@* 	<td><i class="mdi mdi-menu-right"></i></td> *@
+						<tr data-bs-toggle="collapse" data-bs-target="#category2">
+							<td><a href="#category2" data-bs-toggle="collapse" aria-expanded="false" aria-controls="category2"><i class="mdi mdi-custom mdi-chevron-right text-black"></i></a></td>
+							<td class="text-start">Pelindung Kepala</td>
+							<td><span class="badge bg-danger">60%</span></td>
+						</tr>
+						<tr class="collapse" id="category2">
+							<td colspan="3" class="p-0">
+								<div class="collapse ps-custom" id="category2">
+									<table class="table table-bordered table-sm mb-0 align-middle nested-table">
+										<thead class="table-dark text-white">
+											<tr>
+												<th>No</th>
+												<th>Nama Material</th>
+												<th>Stock</th>
+												<th>MSL</th>
+												<th>Readiness Stock</th>
+											</tr>
+										</thead>
+										<tbody class="tbody-custom">
+											<tr><td>1</td><td>Helm Safety</td><td>120</td><td>200</td><td><span class="badge bg-danger">60%</span></td></tr>
+											<tr><td>2</td><td>Cap Liner</td><td>90</td><td>90</td><td><span class="badge bg-success">100%</span></td></tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+
+						<!-- Row 3 -->
+						@* <tr data-bs-toggle="collapse" data-bs-target="#category3" class="table-primary collapsed"> *@
+						@* 	<td><i class="mdi mdi-menu-right"></i></td> *@
+						<tr data-bs-toggle="collapse" data-bs-target="#category3">
+							<td><a href="#category3" data-bs-toggle="collapse" aria-expanded="false" aria-controls="category3"><i class="mdi mdi-custom mdi-chevron-right text-black"></i></a></td>
+							<td class="text-start">Test 3</td>
+							<td><span class="badge bg-warning">100%</span></td>
+						</tr>
+						<tr class="collapse" id="category3">
+							<td colspan="3" class="p-0">
+								<div class="collapse ps-custom" id="category3">
+									<table class="table table-bordered table-sm mb-0 align-middle nested-table">
+										<thead class="table-dark text-white">
+											<tr>
+												<th>No</th>
+												<th>Nama Material</th>
+												<th>Stock</th>
+												<th>MSL</th>
+												<th>Readiness Stock</th>
+											</tr>
+										</thead>
+										<tbody class="tbody-custom">
+											<tr><td>1</td><td>Sarung Tangan Kulit</td><td>0</td><td>500</td><td><span class="badge bg-danger">0%</span></td></tr>
+											<tr><td>2</td><td>Sarung Tangan Listrik</td><td>50</td><td>25</td><td><span class="badge bg-success">200%</span></td></tr>
+											<tr><td>3</td><td>Sarung Tangan Welder</td><td>611</td><td>100</td><td><span class="badge bg-success">611%</span></td></tr>
+											<tr><td>4</td><td>Sarung Tangan Mekanik</td><td>110</td><td>100</td><td><span class="badge bg-warning">87%</span></td></tr>
+											<tr><td>5</td><td>Sarung Tangan Drum Plant</td><td>202</td><td>250</td><td><span class="badge bg-danger">81%</span></td></tr>
+											<tr><td>6</td><td>Sarung Tangan Kain</td><td>3419</td><td>2500</td><td><span class="badge bg-success">137%</span></td></tr>
+											<tr><td>7</td><td>Sarung Tangan Alumunium</td><td>85</td><td>50</td><td><span class="badge bg-success">170%</span></td></tr>
+											<tr><td>8</td><td>Sarung Tangan Asbes</td><td>33</td><td>40</td><td><span class="badge bg-danger">83%</span></td></tr>
+											<tr><td>9</td><td>Sarung Tangan Tangan</td><td>2141</td><td>500</td><td><span class="badge bg-success">428%</span></td></tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<ul class="list-unstyled">
+					<li>Index :</li>
+					<li><span class="mdi mdi-circle text-success"></span> &ge; 115%</li>
+					<li><span class="mdi mdi-circle text-warning"></span> 100% &le; x &lt; 115%</li>
+					<li><span class="mdi mdi-circle text-danger"></span> &lt; 100%</li>
+				</ul>
 			</div>
 		</div>
 	</div>
 </div>
 
 <!-- end row -->
+<!-- Arsip Eksperimen -->
+@* 						<tr>
+							<td class="p-0"></td>
+							<td class="p-0">
+								<div class="collapse" id="category1">
+									<table class="table table-bordered table-sm mb-0">
+										<thead class="table-dark text-white">
+											<tr>
+												<th>No</th>
+												<th>Nama Material</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr><td>1</td><td>Sarung Tangan Kulit</td></tr>
+											<tr><td>2</td><td>Sarung Tangan Listrik</td></tr>
+											<tr><td>3</td><td>Sarung Tangan Welder</td></tr>
+											<tr><td>4</td><td>Sarung Tangan Mekanik</td></tr>
+											<tr><td>5</td><td>Sarung Tangan Drum Plant</td></tr>
+											<tr><td>6</td><td>Sarung Tangan Kain</td></tr>
+											<tr><td>7</td><td>Sarung Tangan Alumunium</td></tr>
+											<tr><td>8</td><td>Sarung Tangan Asbes</td></tr>
+											<tr><td>9</td><td>Sarung Tangan Tangan</td></tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+							<td class="p-0">
+								<div class="collapse" id="category1">
+									<table class="table table-bordered table-sm mb-0">
+										<thead class="table-dark text-white">
+											<tr>
+												<th>Stock</th>
+												<th>MSL</th>
+												<th>Readiness Stock</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr><td>0</td><td>500</td><td><span class="badge bg-danger">0%</span></td></tr>
+											<tr><td>50</td><td>25</td><td><span class="badge bg-success">200%</span></td></tr>
+											<tr><td>611</td><td>100</td><td><span class="badge bg-success">611%</span></td></tr>
+											<tr><td>262</td><td>300</td><td><span class="badge bg-danger">87%</span></td></tr>
+											<tr><td>202</td><td>250</td><td><span class="badge bg-danger">81%</span></td></tr>
+											<tr><td>3419</td><td>2500</td><td><span class="badge bg-success">137%</span></td></tr>
+											<tr><td>85</td><td>50</td><td><span class="badge bg-success">170%</span></td></tr>
+											<tr><td>33</td><td>40</td><td><span class="badge bg-danger">83%</span></td></tr>
+											<tr><td>2141</td><td>500</td><td><span class="badge bg-success">428%</span></td></tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+ *@

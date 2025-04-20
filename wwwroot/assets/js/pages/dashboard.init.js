@@ -209,3 +209,25 @@ if (sparklineChart1Colors) {
     var demo = $('#sparkline').sparkline(series, chartoption);
     ChartColorChangeSparkLine(series,chartoption,'sparkline');
 }
+
+// Tambahan dari SIGAP
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(function (trigger) {
+      const icon = trigger.querySelector("i");
+      const targetId = trigger.getAttribute("href") || trigger.dataset.bsTarget;
+      const collapseEl = document.querySelector(targetId);
+
+      if (!collapseEl || !icon) return;
+
+      collapseEl.addEventListener("show.bs.collapse", function () {
+        icon.classList.remove("mdi-chevron-right");
+        icon.classList.add("mdi-chevron-down");
+      });
+
+      collapseEl.addEventListener("hide.bs.collapse", function () {
+        icon.classList.remove("mdi-chevron-down");
+        icon.classList.add("mdi-chevron-right");
+      });
+    });
+  });

@@ -76,3 +76,7 @@ File: Main Css File
 @import "custom/pages/chat";
 @import "custom/pages/kanbanboard";
 
+// == CUSTOM SIGAP ==
+// Utils
+@import "custom/utils/utility.scss";
+@import "custom/sigap/custom.scss";

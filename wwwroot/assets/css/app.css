@@ -1536,7 +1536,7 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
 }
 
 .waves-effect.waves-success .waves-ripple {
-  background-color: rgba(88, 219, 131, 0.4);
+  background-color: rgba(30, 226, 0, 0.4);
 }
 
 .waves-effect.waves-info .waves-ripple {
@@ -1544,11 +1544,11 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
 }
 
 .waves-effect.waves-warning .waves-ripple {
-  background-color: rgba(245, 178, 37, 0.4);
+  background-color: rgba(255, 165, 0, 0.4);
 }
 
 .waves-effect.waves-danger .waves-ripple {
-  background-color: rgba(236, 83, 108, 0.4);
+  background-color: rgba(255, 0, 0, 0.4);
 }
 
 .avatar-xs {
@@ -1643,12 +1643,12 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
 }
 
 .alert-border-success {
-  border-top-color: #58db83;
+  border-top-color: rgb(30, 226, 0);
 }
 
 .alert-outline-success {
-  border: 1px solid rgb(234.8448275862, 250.6551724138, 240.0344827586);
-  color: #58db83;
+  border: 1px solid rgb(163.5044247788, 255, 149.5);
+  color: rgb(30, 226, 0);
 }
 
 .alert-border-info {
@@ -1661,12 +1661,12 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
 }
 
 .alert-border-warning {
-  border-top-color: #f5b225;
+  border-top-color: orange;
 }
 
 .alert-outline-warning {
-  border: 1px solid rgb(252.8289473684, 238.2828947368, 207.6710526316);
-  color: #f5b225;
+  border: 1px solid rgb(255, 228, 178.5);
+  color: orange;
 }
 
 .alert-border-orange {
@@ -1679,12 +1679,12 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
 }
 
 .alert-border-danger {
-  border-top-color: #ec536c;
+  border-top-color: red;
 }
 
 .alert-outline-danger {
-  border: 1px solid rgb(253.7565445026, 243.7434554974, 245.3795811518);
-  color: #ec536c;
+  border: 1px solid rgb(255, 178.5, 178.5);
+  color: red;
 }
 
 .alert-border-pink {
@@ -2080,16 +2080,16 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
 }
 
 .form-check-success .form-check-input:checked {
-  background-color: #58db83;
-  border-color: #58db83;
+  background-color: rgb(30, 226, 0);
+  border-color: rgb(30, 226, 0);
 }
 
 .form-radio-success .form-check-input:checked {
-  border-color: #58db83;
-  background-color: #58db83;
+  border-color: rgb(30, 226, 0);
+  background-color: rgb(30, 226, 0);
 }
 .form-radio-success .form-check-input:checked:after {
-  color: #58db83;
+  color: rgb(30, 226, 0);
 }
 
 .form-check-info .form-check-input:checked {
@@ -2106,16 +2106,16 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
 }
 
 .form-check-warning .form-check-input:checked {
-  background-color: #f5b225;
-  border-color: #f5b225;
+  background-color: orange;
+  border-color: orange;
 }
 
 .form-radio-warning .form-check-input:checked {
-  border-color: #f5b225;
-  background-color: #f5b225;
+  border-color: orange;
+  background-color: orange;
 }
 .form-radio-warning .form-check-input:checked:after {
-  color: #f5b225;
+  color: orange;
 }
 
 .form-check-orange .form-check-input:checked {
@@ -2132,16 +2132,16 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
 }
 
 .form-check-danger .form-check-input:checked {
-  background-color: #ec536c;
-  border-color: #ec536c;
+  background-color: red;
+  border-color: red;
 }
 
 .form-radio-danger .form-check-input:checked {
-  border-color: #ec536c;
-  background-color: #ec536c;
+  border-color: red;
+  background-color: red;
 }
 .form-radio-danger .form-check-input:checked:after {
-  color: #ec536c;
+  color: red;
 }
 
 .form-check-pink .form-check-input:checked {
@@ -2794,12 +2794,12 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
   display: none;
 }
 #session-timeout-dialog .countdown-holder {
-  color: #ec536c;
+  color: red;
   font-weight: 500;
 }
 #session-timeout-dialog .btn-default {
   background-color: #fff;
-  color: #ec536c;
+  color: red;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -2863,14 +2863,14 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
   color: #0dcaf0;
 }
 .swal2-icon.swal2-success [class^=swal2-success-line] {
-  background-color: #58db83;
+  background-color: rgb(30, 226, 0);
 }
 .swal2-icon.swal2-success .swal2-success-ring {
-  border-color: rgba(88, 219, 131, 0.3);
+  border-color: rgba(30, 226, 0, 0.3);
 }
 .swal2-icon.swal2-warning {
-  border-color: #f5b225;
-  color: #f5b225;
+  border-color: orange;
+  color: orange;
 }
 
 .swal2-styled:focus {
@@ -2896,11 +2896,11 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
 }
 
 .error {
-  color: #ec536c;
+  color: red;
 }
 
 .parsley-error {
-  border-color: #ec536c;
+  border-color: red;
 }
 
 .parsley-errors-list {
@@ -2914,7 +2914,7 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid {
 .parsley-errors-list > li {
   font-size: 12px;
   list-style: none;
-  color: #ec536c;
+  color: red;
   margin-top: 5px;
 }
 
@@ -3159,7 +3159,7 @@ input[switch]:checked + label:after {
 }
 
 input[switch=bool] + label {
-  background-color: #ec536c;
+  background-color: red;
 }
 
 input[switch=bool] + label:before, input[switch=bool]:checked + label:before,
@@ -3168,7 +3168,7 @@ input[switch=default]:checked + label:before {
 }
 
 input[switch=bool]:checked + label {
-  background-color: #58db83;
+  background-color: rgb(30, 226, 0);
 }
 
 input[switch=default]:checked + label {
@@ -3180,7 +3180,7 @@ input[switch=primary]:checked + label {
 }
 
 input[switch=success]:checked + label {
-  background-color: #58db83;
+  background-color: rgb(30, 226, 0);
 }
 
 input[switch=info]:checked + label {
@@ -3188,11 +3188,11 @@ input[switch=info]:checked + label {
 }
 
 input[switch=warning]:checked + label {
-  background-color: #f5b225;
+  background-color: orange;
 }
 
 input[switch=danger]:checked + label {
-  background-color: #ec536c;
+  background-color: red;
 }
 
 input[switch=dark]:checked + label {
@@ -3244,7 +3244,7 @@ div.dataTables_wrapper div.dataTables_filter input {
   background-color: #f8f9fa;
 }
 .sp-container button.sp-choose {
-  background-color: #58db83;
+  background-color: rgb(30, 226, 0);
 }
 
 .sp-palette-container {
@@ -3736,7 +3736,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 .ct-chart .ct-series.ct-series-c .ct-line,
 .ct-chart .ct-series.ct-series-c .ct-point,
 .ct-chart .ct-series.ct-series-c .ct-slice-donut {
-  stroke: #f5b225;
+  stroke: orange;
 }
 .ct-chart .ct-series.ct-series-d .ct-bar,
 .ct-chart .ct-series.ct-series-d .ct-line,
@@ -3748,13 +3748,13 @@ div.dataTables_wrapper div.dataTables_filter input {
 .ct-chart .ct-series.ct-series-e .ct-line,
 .ct-chart .ct-series.ct-series-e .ct-point,
 .ct-chart .ct-series.ct-series-e .ct-slice-donut {
-  stroke: #58db83;
+  stroke: rgb(30, 226, 0);
 }
 .ct-chart .ct-series.ct-series-f .ct-bar,
 .ct-chart .ct-series.ct-series-f .ct-line,
 .ct-chart .ct-series.ct-series-f .ct-point,
 .ct-chart .ct-series.ct-series-f .ct-slice-donut {
-  stroke: #ec536c;
+  stroke: red;
 }
 .ct-chart .ct-series.ct-series-g .ct-bar,
 .ct-chart .ct-series.ct-series-g .ct-line,
@@ -3770,7 +3770,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 
 .ct-series-b .ct-area,
 .ct-series-b .ct-slice-pie {
-  fill: #f5b225;
+  fill: orange;
 }
 
 .ct-series-c .ct-area,
@@ -3780,7 +3780,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 
 .ct-series-d .ct-area,
 .ct-series-d .ct-slice-pie {
-  fill: #58db83;
+  fill: rgb(30, 226, 0);
 }
 
 .ct-area {
@@ -3984,7 +3984,7 @@ div.dataTables_wrapper div.dataTables_filter input {
   padding: 6px 5px;
 }
 .mail-list a.active {
-  color: #ec536c;
+  color: red;
   font-weight: 500;
 }
 
@@ -4396,7 +4396,7 @@ div.dataTables_wrapper div.dataTables_filter input {
   position: absolute;
   width: 8px;
   height: 8px;
-  background-color: #ec536c;
+  background-color: red;
   border-radius: 50%;
   right: 0;
 }
@@ -4428,7 +4428,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 .chat-user-status .status {
   width: 12px;
   height: 12px;
-  background-color: #58db83;
+  background-color: rgb(30, 226, 0);
   border-radius: 50%;
   border: 2px solid var(--bs-border-color);
   position: absolute;
@@ -4474,10 +4474,10 @@ div.dataTables_wrapper div.dataTables_filter input {
   bottom: 0;
 }
 .chat-list li .user-img.online .user-status {
-  background-color: #58db83;
+  background-color: rgb(30, 226, 0);
 }
 .chat-list li .user-img.away .user-status {
-  background-color: #f5b225;
+  background-color: orange;
 }
 .chat-list li.unread a {
   font-weight: 600;
@@ -4790,4 +4790,36 @@ body[data-layout=horizontal] .chat-conversation {
 .gu-transit {
   border: 1px dashed var(--bs-border-color) !important;
   background-color: var(--bs-border-color) !important;
+}
+
+.ps-custom {
+  padding-left: 4.1rem !important;
+}
+
+.table.align-middle > :not(caption) > * {
+  vertical-align: middle;
+}
+
+.tbody-custom {
+  border-bottom: none transparent !important;
+  border-right: none transparent !important;
+}
+.tbody-custom tr td:not(:last-child) {
+  border-right: 1px solid #dee2e6;
+}
+.tbody-custom tr:not(:last-child) td {
+  border-bottom: 1px solid #dee2e6;
+}
+.tbody-custom td:nth-child(2) {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.mdi-custom {
+  font-size: 24px !important;
+  line-height: normal !important;
+}
+
+.nested-table thead th:first-child {
+  border-left-color: #dee2e6 !important;
 }
