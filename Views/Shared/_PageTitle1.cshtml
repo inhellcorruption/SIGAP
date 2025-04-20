@@ -2,10 +2,10 @@
 <div class="row">
     <div class="col-sm-6">
         <div class="page-title-box">
-            <h4>@ViewBag.Title</h4>
+            <h4 class="text-uppercase">@ViewBag.Title</h4>
             <ol class="breadcrumb m-0">
-                <li class="breadcrumb-item"><a href="javascript: void(0);">@ViewBag.pageTitle</a></li>
-                <li class="breadcrumb-item"><a href="javascript: void(0);">@ViewBag.subTitle</a></li>
+                <li class="breadcrumb-item text-uppercase"><a href="/">SIGAP</a></li>
+                @if (!string.IsNullOrEmpty(ViewBag.subTitle as string)) {<li class="breadcrumb-item"><a href="@(ViewBag.subTitleLink ?? "javascript: void(0);")">@ViewBag.subTitle</a></li>}
                 <li class="breadcrumb-item active">@ViewBag.Title</li>
             </ol>
         </div>

@@ -385,11 +385,14 @@ $cyans: (
 // scss-docs-start theme-color-variables
 $primary: $blue;
 $secondary: $gray-600;
-$success: $green;
+//$success: $green;
+$success: rgb(30, 226, 0);
 $info: $cyan;
-$warning: $yellow;
+//$warning: $yellow;
+$warning: orange;
 $orange: $orange;
-$danger: $red;
+//$danger: $red;
+$danger: red;
 $light: $gray-100;
 $dark: $gray-800;
 // scss-docs-end theme-color-variables
@@ -1580,10 +1583,12 @@ $toast-header-border-color: $toast-border-color;
 // Badges
 
 // scss-docs-start badge-variables
-$badge-font-size: 0.75em;
+//$badge-font-size: 0.75em;
+$badge-font-size: 0.9em;
 $badge-font-weight: $font-weight-bold;
 $badge-color: $white;
-$badge-padding-y: 0.25em;
+//$badge-padding-y: 0.25em;
+$badge-padding-y: 0.4em;
 $badge-padding-x: 0.4em;
 $badge-border-radius: var(--#{$prefix}border-radius);
 // scss-docs-end badge-variables
